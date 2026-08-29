@@ -117,3 +117,7 @@ and fails if the picture shakes or freezes. Color is excluded, since a palette
 crossing changes every pixel without anything moving.
 `cargo run --release --example breakdown` reports which source of motion
 dominates a pattern.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
