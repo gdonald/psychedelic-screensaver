@@ -1,0 +1,25 @@
+[package]
+name = "psychedelic"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "psychedelic"
+crate-type = ["rlib", "staticlib", "cdylib"]
+
+[dependencies]
+objc2 = "0.6.4"
+objc2-app-kit = { version = "0.3.2", optional = true }
+objc2-foundation = "0.3.2"
+objc2-metal = "0.3.2"
+objc2-quartz-core = "0.3.2"
+png = "0.18.1"
+rand = "0.10.2"
+winit = { version = "0.30.13", optional = true }
+
+[features]
+preview = ["dep:winit", "dep:objc2-app-kit"]
+
+[[bin]]
+name = "preview"
+required-features = ["preview"]
